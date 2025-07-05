@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap');
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.Loginform{
+  color: white;
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  line-height: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.Loginform span{
+  color: #cd6713;
+  
+}
+.Loginform .header{
+ text-align: center;
+}
+.Loginform .header h1{
+  font-family: "Manufacturing Consent",sans-serif;
+font-size: 1.5rem;
+font-style: italic;
+}
+.Loginform .header p{
+  opacity: 0.5;
+}
+.Loginform .input{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 1;
+  align-items: center;
+  max-width:500px;
+  min-width: 300px;
+  width: 100%;
+}
+.Loginform .input h3{
+  font-size: 1rem;
+  
+}
+.Loginform .input input:focus{
+outline: none;
+}
+.Loginform .input input:hover{
+   box-shadow: 2px 0 10px #cd6713;
+  border: none;
+}
+.Loginform .input input{
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  background: transparent;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding-left:1rem;
+  height: 2rem;
+  width:350px ;
+}
+.Loginform .userrememberme section{
+  display: flex;
+}
+.Loginform .userrememberme {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:2rem ;
+ 
+}
+
+.Loginform .submit{
+  cursor: pointer;
+  border: none;
+  background-color: #cd6713;
+  border-radius: 25px;
+  font-weight:400;
+  font-size: 1.5rem;
+  height: 4rem;
+  width: 22rem;
+  color: white;
+}
+.Loginform .submit:hover{
+  opacity: 0.5;
+  
+}
+.link{
+color: white;
+}
+.signupform{
+
+  color: white;
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  line-height: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-flow: column wrap;
+  align-items: center;
+
+}
+.signupform label{
+  margin-top: 1rem;
+  font-family: "Manufacturing Consent",sans-serif;
+font-size: 2rem;
+}
+.signupform .input{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 1;
+  align-items: center;
+  max-width:500px;
+  min-width: 300px;
+  width: 100%;
+}
+.signupform .input input{
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  background: transparent;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding-left:1rem;
+  height: 2rem;
+  width:350px ;
+ 
+}
+.signupform .input input:hover{ 
+  box-shadow: 2px 0 10px #cd6713;
+  border: none;
+ 
+}
+.signupform .input input:focus{
+outline: none; 
+
+}
+
+
+
