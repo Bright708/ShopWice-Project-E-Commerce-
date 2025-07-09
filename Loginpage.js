@@ -1,9 +1,73 @@
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Loginpage = ({email,setEmail,password,setPassword,handleLogin,error,setError}) => {
+    const [isLaptop, setIsLaptop] = useState('');
+    useEffect(() =>{
+     
+        const checkScreenSize = () => {
+          const width = window.innerWidth;
+          setIsLaptop(width >= 1024);
+        };
+        checkScreenSize();
+      
+        window.addEventListener('resize', checkScreenSize);
+        return () => window.removeEventListener('resize', checkScreenSize);
+      }, []);
     return (
+        <>
+            {isLaptop?(
+
+
+<div className='laptopview'>
+  <div className="portion-1">
+    <div className="container">
+      <h1>Shopwice</h1>
+      <h3>Kindly enter your details to login</h3>
+
+      <form>
+        <label className="label" htmlFor="Email">Email</label><br />
+        <input
+          className="input-fields"
+          type="email"
+          id="Email"
+          name="Email"
+          placeholder="Enter your email here ..."
+          required
+        /><br />
+
+        <label className="label" htmlFor="Password">Password</label><br />
+        <input
+          className="input-fields"
+          type="password"
+          id="Password"
+          name="Password"
+          placeholder="Enter your password here ..."
+          required
+        /><br />
+
+        <a id="forgot-password" href="#">Forgot password?</a><br />
+        <button className="sign-in" type="submit">Sign in</button>
+      </form>
+
+      <p id="p-1">or</p>
+
+      <button className="sign-in">
+        <img src="../assets/google.svg" alt="Google icon" />
+        Sign in with Google
+      </button>
+
+      <p>Are you new? <Link to={"/signup"}>Create An Account</Link></p>
+    </div>
+    
+
+  </div>
+
+  </div>
+  
+  ):(
+
         <motion.form
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -41,13 +105,14 @@ const Loginpage = ({email,setEmail,password,setPassword,handleLogin,error,setErr
                  <p>Don't have an account? <Link className='link' to={"/signup"}>Sign Up</Link></p>
             </div>
             <div className="googlelink">
-                <hr className='line'/>
                 <p>OR </p>
-                <hr className='line'/>
                 <button ><i class="ri-google-fill"></i> Sign In with Google </button>
             </div>
             
         </motion.form>
+  )
+  }
+        </>
     
     )
 }
