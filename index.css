@@ -13,8 +13,8 @@ code {
     monospace;
 }
 .Loginform{
-  color: white;
-  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  background:linear-gradient(to bottom,#dbd7d4 , #1db4b9);
   height: 100vh;
   line-height: 1rem;
   display: flex;
@@ -22,18 +22,26 @@ code {
   flex-flow: column wrap;
   align-items: center;
 }
+.Loginform header h1 span{
+  font-family: "Poppins",sans-serif;
+  font-size: 3rem;
+ 
+}
 .Loginform span{
-  color: #cd6713;
+  
+  color: #000000;
   
 }
+
 .Loginform .header{
  text-align: center;
 }
 .Loginform .header h1{
-  font-family: "Manufacturing Consent",sans-serif;
+  font-family: "Poppins",sans-serif;
 font-size: 1.5rem;
 font-style: italic;
 }
+
 .Loginform .header p{
   opacity: 0.5;
 }
@@ -50,6 +58,9 @@ font-style: italic;
   font-size: 1rem;
   
 }
+.Loginform .input input::placeholder{
+  color: #000000;
+  font-size: 1.1rem;}
 .Loginform .input input:focus{
 outline: none;
 }
@@ -59,8 +70,8 @@ outline: none;
 }
 .Loginform .input input{
   border: none;
-  border-bottom: 1px solid white;
-  color: white;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   background: transparent;
   border-radius: 5px;
   font-size: 1.1rem;
@@ -70,13 +81,16 @@ outline: none;
 }
 .Loginform .userrememberme section{
   display: flex;
+  align-items: center;
+  gap: 2px;
 }
 .Loginform .userrememberme {
   width: 100%;
   display: flex;
   align-items: center;
+  align-content: space-between;
   justify-content: center;
-  gap:2rem ;
+  gap:4rem ;
  
 }
 
@@ -95,13 +109,46 @@ outline: none;
   opacity: 0.5;
   
 }
+.Loginform .googlelink{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.Loginform .googlelink button{
+  color: white;
+  border:none ;
+  background-color: #000000;
+  cursor: pointer;
+height: 3rem;
+width: 15rem;
+border-radius: 25px;
+ 
+}
+.Loginform .googlelink .line{
+flex: 1;
+height: 1px;
+background-color: #000000;
+border: none;
+ 
+}
+.Loginform .googlelink p{
+  margin: 10px 10px;
+  color: #000000;
+font-size: 14px;
+}
+.Loginform .googlelink button:hover{
+  opacity: 0.5;
+ 
+}
 .link{
 color: white;
 }
 .signupform{
 
-  color: white;
-  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  background:linear-gradient(to bottom,#dbd7d4 , #1db4b9);
   height: 100vh;
   line-height: 1rem;
   display: flex;
@@ -110,10 +157,15 @@ color: white;
   align-items: center;
 
 }
+.signupform span{
+  color: #000000;
+  
+}
 .signupform label{
   margin-top: 1rem;
-  font-family: "Manufacturing Consent",sans-serif;
-font-size: 2rem;
+  font-family: "Poppins",sans-serif;
+font-size: 1.5rem;
+font-style: italic;
 }
 .signupform .input{
   display: flex;
@@ -124,17 +176,21 @@ font-size: 2rem;
   min-width: 300px;
   width: 100%;
 }
+.signupform .input input::placeholder{
+  color: #000000;
+  font-size: 1.1rem;
+  
+}
 .signupform .input input{
   border: none;
-  border-bottom: 1px solid white;
-  color: white;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   background: transparent;
   border-radius: 5px;
   font-size: 1.1rem;
   padding-left:1rem;
   height: 2rem;
   width:350px ;
- 
 }
 .signupform .input input:hover{ 
   box-shadow: 2px 0 10px #cd6713;
@@ -145,6 +201,166 @@ font-size: 2rem;
 outline: none; 
 
 }
+.signupform button{
+  cursor: pointer;
+  border: none;
+  background-color: #cd6713;
+  border-radius: 25px;
+  font-weight:400;
+  font-size: 1.5rem;
+  height: 4rem;
+  width: 22rem;
+  color: white;
+
+}
+.signupform button:hover{
+  opacity: 0.5;
+}
+
+.signupform header{
+  font-family: "Poppins",sans-serif;
+font-size: 1.5rem;
+
+
+}
+@media screen and (min-width:1024px) {
+
+body {
+  min-width: 1024px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+}
+.laptopview{
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+.portion-1 {
+  min-width: 512px;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: -9rem;
+  background-color: rgba(8, 80, 86, 0.961) ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  box-sizing: border-box;
+
+
+}
+.portion-2 {
+  width: 50%;
+  height: 100vh;
+  background-image: url('./images/WhatsApp\ Image\ 2025-07-08\ at\ 12.14.23_c55422f4.jpg');
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+
+}
+.container{
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  height: 800px;
+}
+h1{
+  text-shadow: 3px 3px rgba(8, 80, 86, 0.961);
+  font-size: 80px;
+  color: white;
+  margin-bottom: 20px;
+}
+h1:hover{
+  color: rgba(255, 255, 255, 0.724);
+}
+
+h3{
+  color: white;
+  margin-bottom: 50px;
+}
+.label{
+  color: rgba(255, 255, 255, 0.849);
+  margin-top: 5000px;
+}
+.input-fields{
+  border-radius: 10px;
+  width: 350px;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid black;
+  color: rgb(107, 104, 104);
+}
+.input-fields:hover{
+  border: solid 2px black;
+}
+#forgot-password{
+  margin-left: 210px;
+  color: coral;
+}
+#forgot-password:hover{
+  color: rgba(255, 127, 80, 0.518);
+}
+.sign-in{
+  background-color: rgb(49, 124, 171);
+  border-radius: 10px;
+  width: 350px;
+  height: 40px;
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border: 2px solid black;
+  color: white;
+  cursor: pointer;
+}
+img{
+  width: 10px;
+  margin-right: 10px;
+}
+.sign-in:hover{
+  transition: all ease-in .4s 0s;
+  background-color: orange;
+  color: white;
+
+}
+a{
+  text-decoration: none;
+  color: coral;
+}
+
+a:hover{
+  color: rgba(255, 127, 80, 0.518);
+}
+#p-1{
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-items: center;
+  color: white;
+  font-weight: 800;
+}
+
+#p-1::before,#p-1::after{
+  display: block;
+  content: '';
+  width: 110px;
+  height: 1.5px;
+  background-color: white;
+
+}
+
+
+
+} 
 
 
 
