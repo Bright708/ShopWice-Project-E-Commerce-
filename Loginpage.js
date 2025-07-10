@@ -1,26 +1,41 @@
 import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Cartimg from './Images/43654.jpg';
+
 
 const Loginpage = ({email,setEmail,password,setPassword,handleLogin,error,setError}) => {
     const [isLaptop, setIsLaptop] = useState('');
     useEffect(() =>{
-     
+        // Function to check screen width
         const checkScreenSize = () => {
           const width = window.innerWidth;
           setIsLaptop(width >= 1024);
         };
+      
+        // Run once on component mount
         checkScreenSize();
       
+        // Re-run when window is resized
         window.addEventListener('resize', checkScreenSize);
+      
+        // Cleanup on component unmount
         return () => window.removeEventListener('resize', checkScreenSize);
       }, []);
     return (
         <>
+        <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
             {isLaptop?(
 
 
-<div className='laptopview'>
+<motion.div 
+initial={{ opacity: 0, y: -50 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.5 }}
+ className='laptopview'>
   <div className="portion-1">
     <div className="container">
       <h1>Shopwice</h1>
@@ -31,6 +46,8 @@ const Loginpage = ({email,setEmail,password,setPassword,handleLogin,error,setErr
         <input
           className="input-fields"
           type="email"
+          value={email}
+          onChange={(e)=>setEmail(e.target.value)}
           id="Email"
           name="Email"
           placeholder="Enter your email here ..."
@@ -42,6 +59,8 @@ const Loginpage = ({email,setEmail,password,setPassword,handleLogin,error,setErr
           className="input-fields"
           type="password"
           id="Password"
+          value={password} 
+          onChange={(e)=>setPassword(e.target.value)}
           name="Password"
           placeholder="Enter your password here ..."
           required
@@ -54,17 +73,15 @@ const Loginpage = ({email,setEmail,password,setPassword,handleLogin,error,setErr
       <p id="p-1">or</p>
 
       <button className="sign-in">
-        <img src="../assets/google.svg" alt="Google icon" />
-        Sign in with Google
+      <i class="ri-google-fill"></i>  Sign in with Google
       </button>
 
       <p>Are you new? <Link to={"/signup"}>Create An Account</Link></p>
     </div>
-    
+  </div> <br />
+  <img className='cartimg' src={Cartimg} alt="cart image"style={{width:'700px', height:'auto'}}/>
 
-  </div>
-
-  </div>
+</motion.div>
   
   ):(
 
@@ -75,10 +92,7 @@ const Loginpage = ({email,setEmail,password,setPassword,handleLogin,error,setErr
         
         className='Loginform' onSubmit={handleLogin}>
 
-            <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+            
             <header><h1><span>SHOPWICE</span></h1></header>
             <label className='header'>
                 <h1>Welcome Back</h1>
