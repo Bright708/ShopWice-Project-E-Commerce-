@@ -237,8 +237,8 @@ body {
 }
 .laptopview{
   display: flex;
-  flex-direction: row;
-  gap: 5rem;
+  gap: 4rem;
+ height: 100vh;
 }
 .portion-1 {
   min-width: 512px;
@@ -247,6 +247,7 @@ body {
   margin-top: -9rem;
   background-color: rgba(8, 80, 86, 0.961) ;
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -256,14 +257,15 @@ body {
 
 
 }
-.portion-2 {
-  width: 50%;
-  height: 100vh;
-  background-image: url('./images/WhatsApp\ Image\ 2025-07-08\ at\ 12.14.23_c55422f4.jpg');
-  background-position: center;
-  background-size:cover;
-  background-repeat: no-repeat;
 
+
+
+
+
+.portion-2img{
+  max-width: 90%;
+   height: auto;
+   object-fit: cover;
 }
 .container{
   padding-top: 120px;
@@ -311,6 +313,7 @@ h3{
   color: rgba(255, 127, 80, 0.518);
 }
 .sign-in{
+  border: none;
   background-color: rgb(49, 124, 171);
   border-radius: 10px;
   width: 350px;
